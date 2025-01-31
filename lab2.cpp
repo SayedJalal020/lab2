@@ -9,6 +9,8 @@
 //This program needs some refactoring.
 //We will do this in class together.
 //
+//1/31/2025 add some text
+//to do list
 //
 #include <iostream>
 using namespace std;
@@ -21,6 +23,7 @@ using namespace std;
 #include <X11/Xlib.h>
 #include <X11/keysym.h>
 #include <GL/glx.h>
+#include "fonts.h"
 
 //some structures
 
@@ -86,6 +89,7 @@ int main()
 		x11.swapBuffers();
 		usleep(200);
 	}
+  cleanup_fonts();
 	return 0;
 }
 
@@ -130,7 +134,7 @@ void X11_wrapper::set_title()
 {
 	//Set the window title bar.
 	XMapWindow(dpy, win);
-	XStoreName(dpy, win, "3350 Lab-1");
+	XStoreName(dpy, win, "3350 Lab-1 ESC to exit");
 }
 
 bool X11_wrapper::getXPending()
