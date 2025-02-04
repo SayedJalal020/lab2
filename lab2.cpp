@@ -283,6 +283,7 @@ void render()
 		glVertex2f( g.w,  g.w);
 		glVertex2f( g.w, -g.w);
 	glEnd();
+
 	glPopMatrix();
 }
 
